@@ -22,7 +22,8 @@ req.body = {
 }.to_json
 
 res = https.request(req)
+# this line will print total information. (response.code / response.message / response.body)
 puts "Response #{res.code} #{res.message}: #{res.body}"
 
-# if you want to print only 'translated text', un-conmment below one.
+# if you want to print only 'translated text', un-conmment below line.
 # puts (JSON.parse(res.body))["message"]["result"]["translatedText"]
